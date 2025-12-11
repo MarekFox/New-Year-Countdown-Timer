@@ -8,7 +8,7 @@ import pyfiglet
 # Czcionka "doom" jest bardzo szeroka i blokowa
 # Czcionka "big" jest duża i klasyczna
 # jeszcze jest "banner"
-FIGLET_FONT = 'banner'  # <<< Zmień na 'big', aby przetestować inną opcję
+FIGLET_FONT = 'big'  # <<< Zmień na 'big', aby przetestować inną opcję
 
 # Initialize colorama
 init(autoreset=True)
