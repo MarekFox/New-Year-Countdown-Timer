@@ -18,7 +18,7 @@ init(autoreset=True)
 
 # Ustawienie celu
 # new_year = datetime(datetime.now().year + 1, 1, 1)
-new_year = datetime(2025, 12, 11)
+new_year = datetime(2025, 12, 12)
 
 # Ustawienie szerokości kolumn
 os.system(f"stty cols {TARGET_COLUMNS}") 
