@@ -9,7 +9,7 @@ import os # NOWY IMPORT
 # Czcionka "big" jest duża i klasyczna
 # jeszcze jest "banner"
 FIGLET_FONT = 'doom' 
-TARGET_COLUMNS = 10 # <<<<< KLUCZOWA ZMIENNA: Wymuś mniejszą liczbę kolumn (np. 55 zamiast 108)
+TARGET_COLUMNS = 5 # <<<<< KLUCZOWA ZMIENNA: Wymuś mniejszą liczbę kolumn (np. 55 zamiast 108)
 
 # Inicjalizacja
 init(autoreset=True)
