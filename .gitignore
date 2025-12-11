@@ -1,0 +1,9 @@
+# Foldery środowisk wirtualnych
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+
+# Logi
+*.log
