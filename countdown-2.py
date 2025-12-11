@@ -2,45 +2,48 @@ from datetime import datetime, timedelta
 import time
 from colorama import Fore, init
 import pyfiglet
+import os # NOWY IMPORT
 
 # 1. Ustawienia
-# Zmień wartość zmiennej FIGLET_FONT na "doom" lub "big"
 # Czcionka "doom" jest bardzo szeroka i blokowa
 # Czcionka "big" jest duża i klasyczna
 # jeszcze jest "banner"
-FIGLET_FONT = 'big'  # <<< Zmień na 'big', aby przetestować inną opcję
+FIGLET_FONT = 'doom' 
+TARGET_COLUMNS = 55 # <<<<< KLUCZOWA ZMIENNA: Wymuś mniejszą liczbę kolumn (np. 55 zamiast 108)
 
-# Initialize colorama
+# Inicjalizacja
 init(autoreset=True)
 
-# Set New Year's target
+# Ustawienie celu
 new_year = datetime(datetime.now().year + 1, 1, 1)
 
+# Ustawienie szerokości kolumn (zanim rozpocznie się pętla)
+# Ta komenda wymusi na Termux renderowanie znaków szerzej, by zmieściły się w 55 kolumnach
+os.system(f"stty cols {TARGET_COLUMNS}") 
+
+
 while datetime.now() < new_year:
-    # Calculate remaining time
+    # ... (reszta obliczeń czasu bez zmian)
     remaining = new_year - datetime.now()
-
-    # Format remaining time as a string (remove microseconds)
-    # Format: D days, H:MM:SS
     remaining_str = str(remaining).split(".")[0] 
-
-    # 2. Generowanie formatu figlet z użyciem wybranej czcionki
+    
+    # 2. Generowanie figlet z czcionką 'doom'
     formatted_time = pyfiglet.figlet_format(remaining_str, font=FIGLET_FONT)
 
-    # Clear the screen (works on most terminals, might not work in all Android environments)
-    # Używamy \033[2J, które lepiej działa w Termux niż \033c
+    # Czyszczenie ekranu (lepiej działa \033[2J w Termux)
     print("\033[2J", end="") 
 
-    # Display remaining time in figlet font
+    # Wyświetlanie
     print(Fore.GREEN + formatted_time)
 
-    # Delay for 1 second
     time.sleep(1)
 
-# Clear the screen one last time
+# Czyszczenie ekranu po zakończeniu
 print("\033[2J", end="")
 
-# Print Happy New Year message
-# Używamy tej samej czcionki
+# Wypisanie wiadomości końcowej
 new_year_msg = pyfiglet.figlet_format("Happy New Year!", font=FIGLET_FONT)
 print(Fore.YELLOW + new_year_msg)
+
+# *** ODCZYTANIE ZMIAN: Przywrócenie oryginalnej szerokości terminala ***
+os.system("stty cols 108") # Przywrócenie kolumn do domyślnej wartości (108)
