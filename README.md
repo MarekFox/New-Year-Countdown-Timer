@@ -25,7 +25,7 @@ Pobierz kod projektu z serwisu GitHub na swoje urządzenie mobilne:
 
 1.  **Klonowanie:**
     ```bash
-    git clone [https://github.com/TwojaNazwaUzytkownika/nazwa-repozytorium.git](https://github.com/MarekFox/New-Year-Countdown-Timer.git) 
+    git clone https://github.com/MarekFox/New-Year-Countdown-Timer.git
     ```
     *(Pamiętaj, aby zastąpić adresem URL swojego repozytorium!)*
 
