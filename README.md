@@ -43,11 +43,11 @@ Pobierz kod projektu z serwisu GitHub na swoje urządzenie mobilne:
 
 ### Krok 4: Optymalizacja Wyświetlania i Uruchomienie
 
-Projekt wykorzystuje specjalny skrypt `countdown-2.py`, który dostosowuje szerokość terminala, aby zmaksymalizować rozmiar czcionki **'doom'**.
+Projekt wykorzystuje specjalny skrypt `countdown.py`, który dostosowuje szerokość terminala, aby zmaksymalizować rozmiar czcionki **'doom'**.
 
 #### 4.1. Ustawienie Optymalnego Rozmiaru (Kluczowe!)
 
-W pliku `countdown-2.py` optymalna wartość dla większości smartfonów to `TARGET_COLUMNS = 35` (dla telefonu z 108 kolumnami). Możesz ją zmodyfikować, jeśli tekst będzie się łamać:
+W pliku `countdown.py` optymalna wartość dla większości smartfonów to `TARGET_COLUMNS = 35` (dla telefonu z 108 kolumnami). Możesz ją zmodyfikować, jeśli tekst będzie się łamać:
 
 1.  **Otwórz plik** w Termuxie (np. za pomocą edytora `nano`):
     ```bash
@@ -61,4 +61,4 @@ W pliku `countdown-2.py` optymalna wartość dla większości smartfonów to `TA
 Upewnij się, że telefon jest w **orientacji poziomej** (krajobrazowej), a następnie uruchom:
 
 ```bash
-python countdown-2.py
+python countdown.py
