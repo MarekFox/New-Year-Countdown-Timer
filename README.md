@@ -51,7 +51,7 @@ W pliku `countdown.py` optymalna wartość dla większości smartfonów to `TARG
 
 1.  **Otwórz plik** w Termuxie (np. za pomocą edytora `nano`):
     ```bash
-    nano countdown-2.py
+    nano countdown.py
     ```
 2.  **Zmień wartość** zmiennej `TARGET_COLUMNS` (np. na 40, jeśli 35 jest zbyt duże, lub na 30, jeśli nadal jest za małe).
 3.  **Zapisz i wyjdź** (Ctrl+O, Enter, Ctrl+X).
