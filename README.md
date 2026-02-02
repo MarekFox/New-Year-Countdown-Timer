@@ -27,7 +27,6 @@ Pobierz kod projektu z serwisu GitHub na swoje urządzenie mobilne:
     ```bash
     git clone https://github.com/MarekFox/New-Year-Countdown-Timer.git
     ```
-    *(Pamiętaj, aby zastąpić adresem URL swojego repozytorium!)*
 
 2.  **Przejdź do katalogu projektu:**
     ```bash
